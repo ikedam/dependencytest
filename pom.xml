@@ -8,15 +8,16 @@
 
   <groupId>org.jenkins-ci.plugins</groupId>
   <artifactId>dependencytest</artifactId>
-  <version>0.0.3</version>
+  <version>0.0.2</version>
   <packaging>pom</packaging>
 
   <url>https://github.com/ikedam/dependencytest</url>
 
   <modules>
     <module>dependee</module>
-    <module>mandatory-depender</module>
     <module>depender</module>
+    <module>mandatory-depender</module>
+    <module>optional-depender</module>
   </modules>
 
   <!-- get every artifact through repo.jenkins-ci.org, which proxies all the artifacts that we need -->

@@ -1,7 +1,7 @@
 /*
  * The MIT License
  * 
- * Copyright (c) 2013 IKEDA Yasuyuki
+ * Copyright (c) 2019 CloudBees Inc.
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -22,16 +22,16 @@
  * THE SOFTWARE.
  */
 
-package org.jenkinsci.plugins.dependencytest.depender;
+package org.jenkinsci.plugins.dependencytest.optionaldepender;
 
 import org.jenkinsci.plugins.dependencytest.dependee.Dependee;
 import org.jenkinsci.plugins.variant.OptionalExtension;
 
 /**
- * Extension to test optional dependencies.
+ * Extension to test an optional dependency using a method from the dependency
  */
 @OptionalExtension(requirePlugins = {"dependee"})
-public class DependerExtension2 {
+public class OptionalDependerExtension {
     private static void foo(Dependee d) {
 
     }
