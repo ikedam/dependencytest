@@ -2,23 +2,29 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.jenkins-ci.plugins</groupId>
-    <artifactId>plugin</artifactId>
-    <version>1.466</version><!-- which version of Jenkins is this plugin built against? -->
+    <artifactId>dependencytest</artifactId>
+    <version>0.0.2</version>
   </parent>
 
-  <groupId>org.jenkins-ci.plugins</groupId>
-  <artifactId>dependencytest</artifactId>
-  <version>0.0.2</version>
-  <packaging>pom</packaging>
+  <groupId>org.jenkins-ci.plugins.dependencytest</groupId>
+  <artifactId>optional-depender</artifactId>
+  <packaging>hpi</packaging>
 
   <url>https://github.com/ikedam/dependencytest</url>
 
-  <modules>
-    <module>dependee</module>
-    <module>depender</module>
-    <module>mandatory-depender</module>
-    <module>optional-depender</module>
-  </modules>
+  <dependencies>
+    <dependency>
+      <groupId>org.jenkins-ci.plugins</groupId>
+      <artifactId>variant</artifactId>
+      <version>1.3</version>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>dependee</artifactId>
+      <version>${project.version}</version>
+      <optional>true</optional>
+    </dependency>
+  </dependencies>
 
   <!-- get every artifact through repo.jenkins-ci.org, which proxies all the artifacts that we need -->
   <repositories>
